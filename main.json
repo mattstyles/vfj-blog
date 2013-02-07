@@ -1,0 +1,20 @@
+{
+  'nav': [ 'git',
+           'typography',
+           'code',
+  	       'soap' 
+  ],
+
+  'recent': [
+    {
+      'title'    : 'Dummy title',
+      'category' : 'code',
+      'date'     : 'Friday 12th Jan 2013'
+    },
+    {
+      'title'    : 'Another dummy title',
+      'category' : 'soap',
+      'date'     : 'Wednesday 10th Jan 2013'
+    }
+  ]
+}

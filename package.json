@@ -1,0 +1,29 @@
+{
+  "name": "vfj-blog",
+  "version": "0.1.0",
+  "description": "veryfizzyjelly blog",
+  "author": {
+    "name": "Matt Styles",
+    "email": "matt@veryfizzyjelly.com"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "scripts": {
+    "start": "node index"
+  },
+  "bugs": {
+    "url": "https://github.com/mattstyles/vfj-blog/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mattstyles/vfj-blog/blob/master/LICENSE-MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattstyles/vfj-blog.git"
+  }
+}

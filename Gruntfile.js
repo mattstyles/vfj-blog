@@ -11,6 +11,16 @@ module.exports = function(grunt) {
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
+    less: {
+      development: {
+        options: {
+   	  paths: ["dev/public/less"]
+        },
+        files: {
+  	  "dev/public/css/app.css": "dev/public/less/*.less"
+        }
+      }
+    },
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -73,6 +83,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'concat', 'uglify']);

@@ -1,5 +1,5 @@
 {{> header }}
 
-    <div>{{{ content }}}</div>
+    <article class='single-post'>{{{ content }}}</article>
 
 {{> footer }}

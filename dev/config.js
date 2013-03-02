@@ -22,7 +22,7 @@ module.exports = {
     tmplOpts: {
 
         engine  : 'hogan',
-        path    : './default/'
+        path    : './vfj/'
 
     },
 

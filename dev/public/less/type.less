@@ -99,6 +99,30 @@ p a:hover {
 
 
 // Copy
+h1 + p {
+  text-indent: 0px;
+  margin-bottom: 22px;
+  line-height: 42px;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-family: garamond-premier-pro;
+
+  &:first-line {
+    font-weight: 500;
+    font-variant: small-caps;
+  }
+
+  &:first-letter {
+    font-size: 3.2em;
+    font-weight: 300;
+    float: left;
+    line-height: 1.1em;
+    margin-right: 8px;
+  }
+}
+
 p {
   margin-bottom: 4px;
   font-style: normal;
@@ -138,30 +162,6 @@ p.first {
   text-indent: 0px;
   font-style: normal;
   font-weight: 400;
-  font-family: garamond-premier-pro;
-}
-
-p.lead:first-line {
-  font-weight: 500;
-  font-variant: small-caps;
-}
-
-p.lead:first-letter {
-  font-size: 3.2em;
-  font-weight: 300;
-  float: left;
-  line-height: 1.1em;
-  margin-right: 8px;
-}
-
-p.lead {
-  text-indent: 0px;
-  margin-bottom: 22px;
-  line-height: 42px;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0px;
   font-family: garamond-premier-pro;
 }
 

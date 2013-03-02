@@ -18,6 +18,12 @@ p { font-family: @copy_font; }
 p.code { font-family: @code_font; }
 blockquote { font-family: @quote_font; }
 
+// Add ligatures
+// Only add to h1 and h2 - h3 and below dont need them
+h1, h2 {
+  .ligatures;
+}
+
 
 // Headings
 h1 {
@@ -27,11 +33,11 @@ h1 {
 //  font-family: garamond-premier-pro-display;
   font-style: normal;
   font-weight: 400;
-  -moz-font-feature-settings: 'liga=1';
-  -ms-font-feature-settings: 'liga' 1;
-  -webkit-font-feature-settings: 'liga' 1;
-  -o-font-feature-settings: 'liga' 1;
-  font-feature-settings: 'liga' 1;
+//  -moz-font-feature-settings: 'liga=1';
+//  -ms-font-feature-settings: 'liga' 1;
+//  -webkit-font-feature-settings: 'liga' 1;
+//  -o-font-feature-settings: 'liga' 1;
+//  font-feature-settings: 'liga' 1;
   text-indent: 0px;
   letter-spacing: -2px;
 }
@@ -45,11 +51,11 @@ h2 {
 //  font-family: garamond-premier-pro-display;
   text-align: center;
   text-transform: none;
-  -moz-font-feature-settings: 'liga=1';
-  -ms-font-feature-settings: 'liga' 1;
-  -webkit-font-feature-settings: 'liga' 1;
-  -o-font-feature-settings: 'liga' 1;
-  font-feature-settings: 'liga' 1;
+//  -moz-font-feature-settings: 'liga=1';
+//  -ms-font-feature-settings: 'liga' 1;
+//  -webkit-font-feature-settings: 'liga' 1;
+//  -o-font-feature-settings: 'liga' 1;
+//  font-feature-settings: 'liga' 1;
   padding: 0px 48px;
   font-style: italic;
 }

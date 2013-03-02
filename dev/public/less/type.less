@@ -7,6 +7,11 @@
 // Includes
 @import 'vars.less';
 
+// Base size
+body {
+
+}
+
 // Measure
 h1 { width: @head_width; }
 .single-post { width: @copy_width; }
@@ -92,14 +97,14 @@ h3 + p {
 // Links
 p a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 1.00);
+  color: col_link;
   border-bottom: 2px dotted #999;
   padding: 2px 2px 0px;
   line-height: 12px;
 }
 
 p a:hover {
-  background-color: rgba(242, 242, 242, 1.00);
+  background-color: #f2f2f2;
   cursor: pointer;
 }
 
@@ -162,34 +167,56 @@ p.date {
   text-align: left;
 }
 
-p.first {
-  text-indent: 0px;
-  font-style: normal;
-  font-weight: 400;
-}
+//p.hr {
+//  text-align: center;
+//  margin-top: 64px;
+//  margin-bottom: 48px;
+//}
+//
+//p.hr-bottom {
+//  text-align: center;
+//  margin-top: 48px;
+//  margin-bottom: 48px;
+//}
+//
+//p.hr:last-child {
+//  margin-top: 28px;
+//}
+//
+//p.hr:before {
+//  content:'*   *   *';
+//}
 
-p.hr {
+
+// Horizontal Rules
+hr {
   text-align: center;
   margin-top: 64px;
   margin-bottom: 48px;
+  border:none;
+
+  &:before {
+    content:'***';
+    letter-spacing: 16px;
+    font-size: 21px;
+    font-family: @copy_font;
+  }
 }
 
-p.hr-bottom {
-  text-align: center;
+hr:last-of-type {
+  &:before {
+    content:'-§-'
+  }
   margin-top: 48px;
-  margin-bottom: 48px;
 }
 
-p.hr:last-child {
-  margin-top: 28px;
-}
-
+// Foot of the post
 p.footer {
   text-indent: 0px;
   margin-bottom: 24px;
   font-size: 16px;
   letter-spacing: 0px;
-  color: rgba(102, 100, 100, 1.00);
+  color: rgba(100, 100, 100, 1.00);
   font-weight: 400;
   border-top: 1px solid #c4c4c4;
   padding-top: 18px;
@@ -198,6 +225,7 @@ p.footer {
   line-height: 24px;
 }
 
+// Code blocks
 p.code {
   color: rgba(242, 242, 242, 1.00);
   width: 568px;
@@ -217,21 +245,24 @@ p.code {
 
 // Blockquotes
 blockquote {
-  font-size: 24px;
-  line-height: 34px;
-  font-style: italic;
-  font-weight: 400;
-  text-indent: 0px;
-  color: rgba(51, 51, 51, 1.00);
-  width: 568px;
-  background-color: rgba(242, 242, 242, 1.00);
-  padding: 24px;
-  margin: 18px 12px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  margin: 0;  // CSS Reset due to using p's inside blockquotes
+  p {
+    font-size: 24px;
+    line-height: 34px;
+    font-style: italic;
+    font-weight: 400;
+    text-indent: 0px;
+    color: rgba(51, 51, 51, 1.00);
+    width: 568px;
+    background-color: rgba(242, 242, 242, 1.00);
+    padding: 24px;
+    margin: 18px 12px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+  }
 }
 
 // Lists

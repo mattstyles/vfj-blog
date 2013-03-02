@@ -15,7 +15,7 @@ module.exports = {
         port        : 3001,
         customPath  : '/public/',
         favicon     : 'favicon.png',
-        logo        : 'logo.png'
+        logo        : 'vfj-logo.png'
     },
 
     // Template Options

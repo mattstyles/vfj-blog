@@ -1,0 +1,7 @@
+<nav>
+    <ul>
+        {{#nav}}
+            <li><a href='/{{item}}'>{{ item }}</a></li>
+        {{/nav}}
+    </ul>
+</nav>

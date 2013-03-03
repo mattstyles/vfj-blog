@@ -95,17 +95,23 @@ h3 + p {
 
 
 // Links
-p a {
-  text-decoration: none;
-  color: col_link;
-  border-bottom: 2px dotted #999;
-  padding: 2px 2px 0px;
-  line-height: 12px;
-}
+p {
+  a {
+    text-decoration: none;
+    color: @col_link;
+    border-bottom: 2px dotted #999;
+    padding: 2px 2px 0px;
+    line-height: 12px;
 
-p a:hover {
-  background-color: #f2f2f2;
-  cursor: pointer;
+    &:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+    }
+
+    &:visited {
+
+    }
+  }
 }
 
 
@@ -166,27 +172,6 @@ p.date {
   margin-bottom: 24px;
   text-align: left;
 }
-
-//p.hr {
-//  text-align: center;
-//  margin-top: 64px;
-//  margin-bottom: 48px;
-//}
-//
-//p.hr-bottom {
-//  text-align: center;
-//  margin-top: 48px;
-//  margin-bottom: 48px;
-//}
-//
-//p.hr:last-child {
-//  margin-top: 28px;
-//}
-//
-//p.hr:before {
-//  content:'*   *   *';
-//}
-
 
 // Horizontal Rules
 hr {
@@ -289,6 +274,26 @@ blockquote {
 
     &:after {
       content:'';
+    }
+  }
+
+  // This selector handles just one paragraph within a blockquote (i.e. no author tag)
+  // Note that 2 paragraphs without an author will still use the last-child selector above and look odd
+  p:first-child {
+    font-size: 24px;
+    line-height: 34px;
+    font-style: italic;
+    font-weight: 400;
+    color: #333;
+    text-align: justify;
+    margin-top: 0;
+
+    &:before {
+      content: '“';
+    }
+
+    &:after {
+      content: '”';
     }
   }
 }

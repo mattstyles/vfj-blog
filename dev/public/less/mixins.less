@@ -5,9 +5,17 @@
  */
 
 .ligatures {
-  -moz-font-feature-settings: 'liga=1';
-  -ms-font-feature-settings: 'liga' 1;
   -webkit-font-feature-settings: 'liga' 1;
-  -o-font-feature-settings: 'liga' 1;
-  font-feature-settings: 'liga' 1;
+     -moz-font-feature-settings: 'liga=1';
+      -ms-font-feature-settings: 'liga' 1;
+       -o-font-feature-settings: 'liga' 1;
+          font-feature-settings: 'liga' 1;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
 }

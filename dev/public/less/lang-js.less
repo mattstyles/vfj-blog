@@ -1,0 +1,34 @@
+/**
+ * veryfizzyjelly blog
+ * --
+ * Specific styling for code tags
+ */
+
+// Includes
+@import 'vars';
+
+// Code blocks
+pre code {
+  &.language-javascript {
+    font-family: @code_font;
+
+    .keyword {
+      font-weight: 800;
+    }
+
+    .number {
+      color:'f2f278';
+    }
+
+    .string {
+      color:'f88432';
+    }
+  }
+}
+
+// Inline Code
+code {
+  &.js {
+    font-family: @code_font;
+  }
+}

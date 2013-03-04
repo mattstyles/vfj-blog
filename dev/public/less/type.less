@@ -219,6 +219,7 @@ pre {
   display: block;
 
   code {
+    font-family: @code_font;
     display: block;
     white-space: pre;
     color: @col_code;
@@ -227,7 +228,7 @@ pre {
     .border-radius(4px);
     background-color: @code_col;
     text-indent: 0;
-    font-size: 19px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
     overflow: auto;
@@ -235,12 +236,13 @@ pre {
 }
 
 p > code {
+  font-family: @code_font;
   color: @col_code;
   padding: 3px 6px;
   .border-radius(4px);
   background-color: @code_col;
   text-indent: 0;
-  font-size: 19px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   white-space: nowrap;

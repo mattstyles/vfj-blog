@@ -1,5 +1,5 @@
 <nav>
-    <img src='{{logo}}' alt='veryfizzyjelly'/>
+    <img src='/{{logo}}' alt='veryfizzyjelly'/>
     <ul>
         {{#nav}}
             <li><a href='/{{item}}'>{{ item }}</a></li>

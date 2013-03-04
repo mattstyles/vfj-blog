@@ -8,6 +8,7 @@
  * These settings will override the default settings
  * @type {Object}
  */
+
 module.exports = {
     // Module Options
     moduleOpts: {
@@ -36,27 +37,9 @@ module.exports = {
 
         contentOpts : {
             user        : 'mattstyles',
-            repo        : 'vfj-content',
+//            repo        : 'vfj-content',
+            repo        : 'vpf-def',
             path        : null
         }
-    },
-
-    // Marked Config Options
-    markedOpts : {
-
-        gfm         : true,
-        tables      : true,
-        breaks      : false,
-        pedantic    : false,
-        sanitize    : false,
-        smartLists  : true,
-        langPrefix  : 'language-',
-        highlight   : function ( code, lang ) {
-            // Javascript highlighting
-            if ( lang === 'js' ) {
-                return highlighter.javascript(code);
-            }
-            return code;
-        }
     }
-}
+};

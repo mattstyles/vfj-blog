@@ -4,6 +4,10 @@
  * Nav
  */
 
+// Includes
+@import 'vars';
+@import 'mixins';
+
 nav {
   position: fixed;
   top: 0;
@@ -20,21 +24,47 @@ nav {
     float: left;
   }
 
+  .logo {
+    float: left;
+    padding: 14px 0px;
+    font-size: 17px;
+    color: #555;
+    .ligatures;
+
+    a {
+      border-bottom: none;
+      padding: 12px 10px 8px;
+      color: @col_type;
+    }
+
+    .accent {
+      font-size:20px;
+    }
+  }
+
   ul {
     float: right;
+    padding: 4px 0px;
 
     li {
       list-style: none;
       padding: 2px 20px;
       text-transform:capitalize;
+      display: inline-block;
 
       a {
-        &:hover {
-
-        }
+        text-decoration: none;
+        padding: 6px 6px 2px;
 
         &:visited {
+          color: @col_type;
+        }
 
+        &:hover {
+          color: @col_type;
+          cursor: pointer;
+          border-bottom: 2px dotted #999;
+          background-color: #f2f2f2;
         }
       }
     }

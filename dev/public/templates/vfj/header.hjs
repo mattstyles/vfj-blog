@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>{{ title }}</title>
+    <script type="text/javascript" src="//use.typekit.net/hwh5unn.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel='stylesheet' href='/css/app.css' />
   </head>
   <body>

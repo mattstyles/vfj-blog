@@ -31,15 +31,27 @@ nav {
     color: #555;
     .ligatures;
 
+    .jelly {
+      font-size:20px;
+    }
+
     a {
       border-bottom: none;
       .border-radius(4px);
       padding: 8px 8px 4px;
       color: @col_type;
-    }
 
-    .accent {
-      font-size:20px;
+      &:hover {
+        .very {
+          color: @col_secondary;
+        }
+        .fizzy {
+          color: @col_tertiary;
+        }
+        .jelly {
+          color: @col_primary;
+        }
+      }
     }
   }
 
@@ -63,7 +75,7 @@ nav {
         }
 
         &:hover {
-          color: @col_type;
+          color: @col_primary;
           cursor: pointer;
           border-bottom: 2px dotted #999;
           background-color: #f2f2f2;

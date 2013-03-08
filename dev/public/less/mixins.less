@@ -51,3 +51,13 @@
        -o-border-top-right-radius: @radius;
           border-top-right-radius: @radius;
 }
+
+.gradient-linear(@direction, @from-colour, @to-colour) {
+  background: rgb(205,235,142); /* Old browsers */
+  background: -webkit-linear-gradient(@direction,  @from-colour 0%, @to-colour 100%); /* Chrome10+,Safari5.1+ */
+  background:    -moz-linear-gradient(@direction,  @from-colour 0%, @to-colour 100%); /* FF3.6+ */
+  background:     -ms-linear-gradient(@direction,  @from-colour 0%, @to-colour 100%); /* IE10+ */
+  background:      -o-linear-gradient(@direction,  @from-colour 0%, @to-colour 100%); /* Opera 11.10+ */
+  background:         linear-gradient(from @direction,  @from-colour 0%, @to-colour 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from-colour', endColorstr='#a5c956',GradientType=0 ); /* IE6-9 */
+}

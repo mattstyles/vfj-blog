@@ -71,3 +71,9 @@
   background:         linear-gradient(from @direction,  @from-colour 0%, @to-colour 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from-colour', endColorstr='#a5c956',GradientType=0 ); /* IE6-9 */
 }
+
+.box-sizing(@box) {
+  -webkit-box-sizing: @box;
+     -moz-box-sizing: @box;
+          box-sizing: @box;
+}

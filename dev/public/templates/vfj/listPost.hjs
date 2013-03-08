@@ -1,10 +1,10 @@
-<ul>
+<ul class='list-post'>
     {{#recents}}
         <li>
-            <hr>
             <h2><a href='/{{ post.category }}{{ post.loc }}'>{{ post.title }}</a></h2>
             <p><small>{{ post.category }} | {{ post.date }}</small></p>
             <p>{{ post.extract }}</p>
+            <hr>
         </li>
     {{/recents}}
 </ul>

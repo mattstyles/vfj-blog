@@ -7,9 +7,19 @@
 .ligatures {
   -webkit-font-feature-settings: 'liga' 1;
      -moz-font-feature-settings: 'liga=1';
+     -moz-font-feature-settings: 'liga' 1;
       -ms-font-feature-settings: 'liga' 1;
        -o-font-feature-settings: 'liga' 1;
           font-feature-settings: 'liga' 1;
+}
+
+.all-ligatures {
+  -webkit-font-feature-settings:"liga", "dlig";
+     -moz-font-feature-settings:"liga=1, dlig=1";
+     -moz-font-feature-settings:"liga", "dlig";
+      -ms-font-feature-settings:"liga", "dlig";
+       -o-font-feature-settings:"liga", "dlig";
+          font-feature-settings:"liga", "dlig";
 }
 
 .border-radius(@radius) {

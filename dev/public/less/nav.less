@@ -44,6 +44,10 @@ nav {
       padding: 4px 8px 2px;
       color: @col_type;
 
+      &:visited {
+        color: @col_type;
+      }
+
       &:hover {
         .very {
           color: @col_secondary;
@@ -75,6 +79,7 @@ nav {
 
       a {
         text-decoration: none;
+        .border-radius(4px);
         padding: 4px 8px 0px;
 
         &:visited {

@@ -14,8 +14,69 @@ body {
 }
 
 // Measure
-h1 { width: @head_width; }
-.single-post { width: @copy_width; }
+
+// > 1280
+@media (min-width: 1280px) {
+  h1 {
+    width: 1024px;
+  }
+  .single-post {
+    width: 640px;
+    margin-left: 18%;
+  }
+}
+
+// 1024 - 1280
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .single-post {
+    h1 {
+      font-size:82px;
+      line-height:96px;
+      width: 840px;
+    }
+
+    width: 620px;
+    margin-left: 18%;
+  }
+}
+
+// 768 - 1024
+@media (min-width: 768px) and (max-width: 1023px) {
+  .single-post {
+    h1 {
+      font-size:82px;
+      line-height:96px;
+      width: 600px;
+    }
+
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// < 768
+@media (max-width: 767px) {
+  .single-post {
+    h1 {
+      font-size:82px;
+      line-height:96px;
+      width: 96%;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    p:first-child {
+      text-align: left;
+    }
+
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+
 
 // Fonts
 body { font-family: @copy_font; }

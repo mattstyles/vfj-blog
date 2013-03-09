@@ -12,12 +12,20 @@ module.exports = function(grunt) {
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     less: {
-      development: {
+      dev: {
         options: {
-   	  paths: ["dev/public/less"]
+          paths: ["dev/public/less"]
         },
         files: {
-  	  "dev/public/css/app.css": "dev/public/less/app.less"
+          "dev/public/css/app.css": "dev/public/less/app.less"
+        }
+      },
+      dist: {
+        options: {
+          paths: ["dev/public/less"]
+        },
+        files: {
+          "dist/public/css/app.css": "dev/public/less/app.less"
         }
       }
     },
@@ -27,8 +35,8 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+        src: ['dev/public/js/<%= pkg.name %>.js'],
+        dest: 'dist/public/js/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -37,7 +45,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        dest: 'dist/public/js/<%= pkg.name %>.min.js'
       }
     },
     jshint: {
@@ -63,6 +71,9 @@ module.exports = function(grunt) {
       },
       lib_test: {
         src: ['lib/**/*.js', 'test/**/*.js']
+      },
+      dist: {
+        src: [ 'dev/public/js/*.js' ]
       }
     },
     watch: {
@@ -74,6 +85,16 @@ module.exports = function(grunt) {
         files: '<%= jshint.lib_test.src %>',
         tasks: ['jshint:lib_test', 'qunit']
       }
+    },
+    copy: {
+        dist: {
+            files: [
+                { src: ['dev/public/img/*'], dest:'dist/public/img/' },
+                { expand:true, flatten:true, src: ['dev/public/templates/vfj/*'], dest:'dist/public/templates/vfj/' },
+                { expand:true, flatten:true, filter: 'isFile', src: ['dev/public/*'], dest:'dist/public/' },
+                { expand:true, flatten:true, filter: 'isFile', src: ['dev/*'], dest:'dist/' }
+            ]
+        }
     }
   });
 
@@ -84,8 +105,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask( 'default', ['jshint', 'concat', 'uglify'] );
+  grunt.registerTask( 'dev', ['less:dev'] );
+  grunt.registerTask( 'dist', ['less:dist', 'jshint:dist', 'concat', 'uglify', 'copy:dist'] );
 
 };

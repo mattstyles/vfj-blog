@@ -37,8 +37,8 @@ module.exports = {
 
         contentOpts : {
             user        : 'mattstyles',
-//            repo        : 'vfj-content',
-            repo        : 'vpf-def',
+            repo        : 'vfj-content',
+//            repo        : 'vpf-def',
             path        : null
         }
     }

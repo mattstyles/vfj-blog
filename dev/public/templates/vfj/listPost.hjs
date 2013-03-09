@@ -2,8 +2,10 @@
     {{#recents}}
         <li>
             <h2><a href='/{{ post.category }}{{ post.loc }}'>{{ post.title }}</a></h2>
-            <p><small>{{ post.category }} | {{ post.date }}</small></p>
-            <p>{{ post.extract }}</p>
+            <p><small><a href='/{{ post.category }}'>{{ post.category }}</a><span class="divider"></span>  {{ post.date }}</small></p>
+            <div class='extract'>
+                <p>{{{ post.extract }}}</p>
+            </div>
             <hr>
         </li>
     {{/recents}}

@@ -1,5 +1,9 @@
-/*
- * veryfizzyjelly blog
+/**
+ * veryfizzyjelly
+ * https://github.com/mattstyles/vfj-blog
+ *
+ * Copyright (c) 2013 Matt Styles
+ * Licensed under the MIT license.
  */
 
 /**
@@ -38,7 +42,6 @@ module.exports = {
         contentOpts : {
             user        : 'mattstyles',
             repo        : 'vfj-content',
-//            repo        : 'vpf-def',
             path        : null
         }
     }

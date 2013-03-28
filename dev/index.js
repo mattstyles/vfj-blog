@@ -10,4 +10,5 @@
  * The main index file that starts Viperfish
  */
 
+require('viperfish').require( ['octofish'] );
 require('viperfish').start();

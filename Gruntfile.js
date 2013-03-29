@@ -20,12 +20,12 @@ module.exports = function(grunt) {
           "dev/public/css/app.css": "dev/public/less/app.less"
         }
       },
-      dist: {
+      prod: {
         options: {
           paths: ["dev/public/less"]
         },
         files: {
-          "dist/public/css/app.css": "dev/public/less/app.less"
+          "prod/public/css/app.css": "dev/public/less/app.less"
         }
       }
     },
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['dev/public/js/<%= pkg.name %>.js'],
-        dest: 'dist/public/js/<%= pkg.name %>.js'
+        dest: 'prod/public/js/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'dist/public/js/<%= pkg.name %>.min.js'
+        dest: 'prod/public/js/<%= pkg.name %>.min.js'
       }
     },
     jshint: {
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
       lib_test: {
         src: ['lib/**/*.js', 'test/**/*.js']
       },
-      dist: {
+      prod: {
         src: [ 'dev/public/js/*.js' ]
       }
     },
@@ -87,12 +87,12 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-        dist: {
+        prod: {
             files: [
-                { src: ['dev/public/img/*'], dest:'dist/public/img/' },
-                { expand:true, flatten:true, src: ['dev/public/templates/vfj/*'], dest:'dist/public/templates/vfj/' },
-                { expand:true, flatten:true, filter: 'isFile', src: ['dev/public/*'], dest:'dist/public/' },
-                { expand:true, flatten:true, filter: 'isFile', src: ['dev/*'], dest:'dist/' }
+                { src: ['dev/public/img/*'], dest:'prod/public/img/' },
+                { expand:true, flatten:true, src: ['dev/public/templates/vfj/*'], dest:'prod/public/templates/vfj/' },
+                { expand:true, flatten:true, filter: 'isFile', src: ['dev/public/*'], dest:'prod/public/' },
+                { expand:true, flatten:true, filter: 'isFile', src: ['dev/*'], dest:'prod/' }
             ]
         }
     }
@@ -110,6 +110,6 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask( 'default', ['jshint', 'concat', 'uglify'] );
   grunt.registerTask( 'dev', ['less:dev'] );
-  grunt.registerTask( 'dist', ['less:dist', 'jshint:dist', 'concat', 'uglify', 'copy:dist'] );
+  grunt.registerTask( 'prod', ['less:prod', 'jshint:prod', 'concat', 'uglify', 'copy:prod'] );
 
 };

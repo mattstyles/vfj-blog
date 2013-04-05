@@ -34,6 +34,16 @@ module.exports = {
     // GithubApi Config Options
     githubapi : {
 
+        auth : {
+            type        : 'oauth',
+            username    : '',
+            password    : '',
+            scope       : 'user,public_repo',
+            token       : '',
+            KEY         : '',
+            SECRET      : ''
+        },
+
         apiOpts : {
             version     : '3.0.0',
             timeout     : 5000

@@ -36,12 +36,7 @@ module.exports = {
 
         auth : {
             type        : 'oauth',
-            username    : '',
-            password    : '',
-            scope       : 'user,public_repo',
-            token       : '',
-            KEY         : '',
-            SECRET      : ''
+            scope       : 'user,public_repo'
         },
 
         apiOpts : {

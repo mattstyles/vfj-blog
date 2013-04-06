@@ -36,7 +36,9 @@ module.exports = {
 
         auth : {
             type        : 'oauth',
-            scope       : 'user,public_repo'
+            scope       : 'user,public_repo',
+            note        : 'veryfizzyjelly',
+            note_url    : 'veryfizzyjelly.com'
         },
 
         apiOpts : {

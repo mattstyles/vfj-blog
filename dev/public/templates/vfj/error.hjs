@@ -1,5 +1,5 @@
 {{> header }}
 
-    <p>{{ content }}</p>
+    <p class="error">{{ content }}</p>
 
 {{> footer }}

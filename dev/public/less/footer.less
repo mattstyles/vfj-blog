@@ -9,7 +9,7 @@
 
 
 footer {
-  margin: 24px auto 0;
+  margin:48px auto 0;
   text-align: center;
 
   p {
@@ -17,7 +17,26 @@ footer {
 
     small {
       font-size: 72%;
-      color: #888;
+      color: @col_foot;
     }
+
+    a {
+      font-size: 18px;
+      border-bottom: none;
+      color: @col_foot;
+
+      &:visited {
+        color: @col_foot;
+      }
+
+      &:hover {
+        color: @col_type;
+        background: inherit;
+      }
+    }
+  }
+
+  p + p {
+    text-indent: 0px;
   }
 }

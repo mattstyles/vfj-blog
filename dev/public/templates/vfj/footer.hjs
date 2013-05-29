@@ -1,4 +1,10 @@
     <footer>
+      <p>
+        <a href="https://twitter.com/veryfizzyjelly" class="icon-twitter"></a>
+        <a href="https://github.com/mattstyles" class="icon-github"></a>
+        <a href="http://osrc.dfm.io/Mattstyles" class="icon-open-source"></a>
+        <a href="mailto:matt@veryfizzyjelly.com?Subject=Bonjour" class="icon-mail"></a>
+      </p>
       <p><small>Copyright &copy Matt Styles 2013</small></p>
     </footer>
   </body>

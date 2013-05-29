@@ -92,6 +92,9 @@ module.exports = function(grunt) {
             files: [
                 { src: ['dev/public/img/*'], dest:'prod/public/img/' },
                 { expand:true, flatten:true, src: ['dev/public/templates/vfj/*'], dest:'prod/public/templates/vfj/' },
+                { expand:true, flatten:true, filter: 'isFile', src: ['dev/public/css/*'], dest:'prod/public/css/' },
+                { expand:true, flatten:true, filter: 'isFile', src: ['dev/public/fonts/*'], dest:'prod/public/fonts/' },
+                { expand:true, flatten:true, filter: 'isFile', src: ['dev/public/js/*'], dest:'prod/public/js/' },
                 { expand:true, flatten:true, filter: 'isFile', src: ['dev/public/*'], dest:'prod/public/' },
                 { expand:true, flatten:true, filter: 'isFile', src: ['dev/*'], dest:'prod/' }
             ]
@@ -111,6 +114,6 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask( 'default', ['jshint', 'concat', 'uglify'] );
   grunt.registerTask( 'dev', ['less:dev'] );
-  grunt.registerTask( 'prod', ['less:prod', 'jshint:prod', 'concat', 'uglify', 'copy:prod'] );
+  grunt.registerTask( 'prod', ['copy:prod', 'jshint:prod', 'concat', 'uglify', 'less:prod'] );
 
 };
